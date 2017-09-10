@@ -25,7 +25,7 @@ app.use(config.K_SERVER_PATH + '/assets', express.static(path.join(__dirname, '.
 
 // wait all thenable objects initialized
 Promise.all([
-  require('./main.js')
+  require('main.js')
 ])
 .then(routes => {
   _.each(routes,
