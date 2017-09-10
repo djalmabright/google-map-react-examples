@@ -1,5 +1,5 @@
 import 'polyfills.js';
-
+require('import-export');
 const config = require('../config.js');
 global.__DEV__ = !config.K_IS_PRODUCTION;
 
