@@ -1,4 +1,4 @@
-import 'polyfills.js';
+import './polyfills.js';
 require('import-export');
 const config = require('../config.js');
 global.__DEV__ = !config.K_IS_PRODUCTION;
@@ -25,7 +25,7 @@ app.use(config.K_SERVER_PATH + '/assets', express.static(path.join(__dirname, '.
 
 // wait all thenable objects initialized
 Promise.all([
-  require('main.js')
+  require('./main.js')
 ])
 .then(routes => {
   _.each(routes,
